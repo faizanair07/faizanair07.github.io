@@ -76,6 +76,33 @@
         .hero-content {
             max-width: 900px;
         }
+        .hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-image {
+    position: absolute;
+    right: -5%;
+    bottom: -5%;
+    width: 58%;
+    max-width: 850px;
+    opacity: 0.55;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    mix-blend-mode: screen;
+}
 
         .eyebrow {
             color: #999;
@@ -279,6 +306,16 @@
         /* MOBILE */
 
         @media (max-width: 700px) {
+            .hero-image {
+    width: 100%;
+    right: -25%;
+    bottom: 0;
+    opacity: 0.25;
+}
+
+.hero-content {
+    max-width: 100%;
+}
 
             .nav-links {
                 display: none;
@@ -334,14 +371,42 @@
 
 
     <!-- HERO -->
+<section class="hero">
 
-    <section class="hero">
+    <div class="hero-content">
 
-        <div class="hero-content">
+        <div class="eyebrow">
+            Founder • Builder • Entrepreneur
+        </div>
 
-            <div class="eyebrow">
-                Founder • Builder • Entrepreneur
-            </div>
+        <h1>
+            I build businesses,<br>
+            <span>communities & experiences.</span>
+        </h1>
+
+        <p>
+            From running communities and sporting events to digital
+            businesses and AI-powered ideas, I'm building ventures
+            from Pakistan with a global ambition.
+        </p>
+
+        <div class="buttons">
+            <a class="button primary" href="#projects">
+                Explore my projects →
+            </a>
+
+            <a class="button" href="#contact">
+                Get in touch
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="runner.jpg" alt="Runner">
+    </div>
+
+</section>
 
             <h1>
                 Building things<br>
